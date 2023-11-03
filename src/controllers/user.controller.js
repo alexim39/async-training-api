@@ -54,7 +54,7 @@ export const LoginUser = async (req, res) => {
         // NOTE secret should be stored in env file
         const token = jwt.sign({id: user._id}, process.env.JWTTOKENSECRET);
         res.cookie('jwt', token, {
-            httpOnly: true,
+            httpOnly: false,
             secure: true, // set to true if you're using https
             maxAge: 24 * 60 * 60 * 1000 // 1 day
         })
