@@ -57,9 +57,6 @@ export const LoginUser = async (req, res) => {
             maxAge: 24 * 60 * 60 * 1000 // 1 day
         })
 
-        //console.log('cookie=== ',cok)
-        console.log('token=== ',token)
-
         //res.send(token)
         res.send({
             message: 'success'

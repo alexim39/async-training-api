@@ -68,6 +68,9 @@ const courseSchema = mongoose.Schema(
             type: String,
             required: true,
             default: "Paid"
+        },
+        img: {
+            type: String,
         }
     
     },
