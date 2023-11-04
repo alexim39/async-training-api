@@ -1,7 +1,5 @@
 import {Payment} from '../models/payment.model.js';
-import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import cookieParser from 'cookie-parser';
 
 // paystack update on database
 export const paystack = async (req, res) => {

@@ -1,7 +1,6 @@
 import {User} from '../models/user.model.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import cookieParser from 'cookie-parser';
 
 // User registration
 export const registerUser = async (req, res) => {
@@ -54,7 +53,7 @@ export const LoginUser = async (req, res) => {
         // NOTE secret should be stored in env file
         const token = jwt.sign({id: user._id}, process.env.JWTTOKENSECRET);
         res.cookie('jwt', token, {
-            httpOnly: false,
+            httpOnly: true,
             secure: true, // set to true if you're using https
             maxAge: 24 * 60 * 60 * 1000 // 1 day
         })
