@@ -29,7 +29,7 @@ export const registerUser = async (req, res) => {
     }
 }
 
-// User registration
+// User login
 export const LoginUser = async (req, res) => {
     try {
         const user = await User.findOne({
@@ -38,15 +38,13 @@ export const LoginUser = async (req, res) => {
 
         if (!user) {
             return res.status(404).send({
-                //message: "User does not exist"
-                message: "Check your email or password"
+                message: "User does not exist"
             })
         }
 
         if (!await bcrypt.compare(req.body.password, user.password)) {
             return res.status(400).json({
-                //message: "Invalid credentails"
-                message: "Check your email or password"
+                message: "Invalid password credentails"
             })
         }
 
