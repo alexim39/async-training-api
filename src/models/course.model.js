@@ -28,7 +28,7 @@ const courseSchema = mongoose.Schema(
             required: [true, "Please enter the key learning outcome for the course"]
         },
         media: {
-            type: String,
+            type: String, // name or url of main course cover video
         },
         oldPrice: {
             type: Number
@@ -70,7 +70,7 @@ const courseSchema = mongoose.Schema(
             default: "Paid"
         },
         img: {
-            type: String,
+            type: String, // name of main course cover image
         }
     
     },
