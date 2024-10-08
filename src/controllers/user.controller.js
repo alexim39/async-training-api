@@ -158,7 +158,7 @@ export const UserCourseRegistration = async (req, res) => {
                 // Send welcome email to the user
                 const userSubject = 'Welcome to the AI Training Course – Unlock Your Career Potential!';
                 const userMessage = userWelcomeEmailTemplate(updatedUser);
-                sendEmail(surveyData.email, userSubject, userMessage);
+                sendEmail(updatedUser.email, userSubject, userMessage);
 
                 //console.log('User updated successfully:', updatedUser);
                 res.status(200).send(updatedUser)
