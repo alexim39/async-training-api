@@ -2,7 +2,7 @@ export const userWelcomeEmailTemplate = (surveyData) => `
   <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto;">
 
     <header style="text-align: center; padding: 10px; background-color: #f4f4f4;">
-      <span style="font-family: sans-serif; font-size: 20px; font-weight: bold; color: #0e0d17;">Async SkillUp Training</span>
+      <span style="font-family: sans-serif; font-size: 20px; font-weight: bold; color: #00838f;">Async SkillUp Training</span>
     </header>
 
     <main style="padding: 20px;">
@@ -18,9 +18,9 @@ export const userWelcomeEmailTemplate = (surveyData) => `
       By attending this course, you’ll discover how to:
       </p>
 
-      <ul>
+      <ul style="font-weight: bold;">
         <li>Automate daily tasks and streamline your workflow</li>
-        <li><strong>Use AI-driven data analysis to make smarter decisions</ol>
+        <li>Use AI-driven data analysis to make smarter decisions</ol>
         <li>Future-proof your career with skills for the modern workplace</li>
       </ul>
 
@@ -37,7 +37,7 @@ export const userWelcomeEmailTemplate = (surveyData) => `
       </p>
 
       <p>
-      If you have further questions, kindly reach out to us at contacts@diamondprojectonline.com
+      If you have further questions, kindly reach out to us at contacts@async.ng
       </p>
 
       <p>
@@ -55,6 +55,9 @@ export const userWelcomeEmailTemplate = (surveyData) => `
       <div style="text-align: center;">
         <a href="https://training.async.ng" style="padding: 10px 20px; background-color: #28A745; color: white; text-decoration: none; border-radius: 5px; text-align: center; margin: 1em 0;">Course Dashboard</a>
       </div>
+
+      <br>
+      <br>
 
     </main>
   </div>
