@@ -1,6 +1,9 @@
 import {User} from '../models/user.model.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import { sendEmail } from '../services/emailService.js';
+import { ownerEmailTemplate } from '../services/templates/course/ownerTemplate.js';
+import { userWelcomeEmailTemplate } from '../services/templates/course/userTemplate.js';
 
 // User registration
 export const registerUser = async (req, res) => {
@@ -142,6 +145,21 @@ export const UserCourseRegistration = async (req, res) => {
                     code: '404'
                 })
             } else {
+
+            
+                // Send email to form owner
+                const ownerSubject = 'New Course Registration';
+                const ownerMessage = ownerEmailTemplate(updatedUser);
+                const ownerEmails = ['aleximenwo@gmail.com'];
+                for (const email of ownerEmails) {
+                 sendEmail(email, ownerSubject, ownerMessage);
+                }
+
+                // Send welcome email to the user
+                const userSubject = 'Welcome to the AI Training Course – Unlock Your Career Potential!';
+                const userMessage = userWelcomeEmailTemplate(updatedUser);
+                sendEmail(surveyData.email, userSubject, userMessage);
+
                 //console.log('User updated successfully:', updatedUser);
                 res.status(200).send(updatedUser)
             }
