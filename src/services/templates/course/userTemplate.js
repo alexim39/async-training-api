@@ -42,7 +42,7 @@ export const userWelcomeEmailTemplate = (surveyData) => `
 
       <p style="text-align: center;">  
           <a href="https://chat.whatsapp.com/JGcvWWYcQWJ4bAADdRnp1A" style="padding: 10px 20px; background-color: #25D366; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin: 1em 0; font-family: Arial, sans-serif;">  
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="height: 20px; vertical-align: middle; margin-right: 8px;"> Join Our WhatsApp Group  
+             Join Our WhatsApp Group  
           </a>  
       </p>
 
